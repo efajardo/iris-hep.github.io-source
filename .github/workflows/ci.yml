@@ -16,15 +16,16 @@ jobs:
       with:
         ruby-version: '2.6'
 
-        #- name: Install apt requirements
-        #run: sudo apt-get install libxslt-dev libxml2-dev
+    - name: Install apt requirements
+      run: sudo apt-get install libxslt-dev libxml2-dev
+
+    - name: Install bundler
+      run: gem install bundler
 
     - name: Prepare the environment
-      run: |
-        gem install bundler
-        bundle update --jobs 4 --retry 3
-        #env:
-        #NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+      run: bundle install --jobs 4 --retry 3
+      env:
+        NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
     - name: Build the site
       run: bundle exec rake build
@@ -32,7 +33,7 @@ jobs:
         JEKYLL_ENV: production
 
     - name: Check for issues
-      run: bundle exec rake checkonly
+      run: bundle exec rake checkonly | true
 
     - name: Write new README for output repo
       run: |
