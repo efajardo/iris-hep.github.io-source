@@ -1,6 +1,6 @@
-[![Travis status](https://travis-ci.com/iris-hep/iris-hep.github.io-source.svg?branch=master)](https://travis-ci.com/iris-hep/iris-hep.github.io-source)
+[![Github Actions badge](https://github.com/iris-hep/iris-hep.github.io-source/workflows/CI/badge.svg)](https://github.com/iris-hep/iris-hep.github.io-source/actions)
 
-# iris-hep.github.io
+# iris-hep.org Website Source
 
 GitHub pages for IRIS-HEP website
 
