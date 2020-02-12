@@ -2,8 +2,6 @@
 
 # iris-hep.org Website Source
 
-GitHub pages for IRIS-HEP website
-
-Do not make a PR to the output repository directly! Instead, use iris-hep.github.io-source.
+GitHub pages for IRIS-HEP website.
 
 
