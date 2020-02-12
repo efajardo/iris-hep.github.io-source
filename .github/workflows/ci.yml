@@ -16,13 +16,15 @@ jobs:
       with:
         ruby-version: '2.6'
 
+        #- name: Install apt requirements
+        #run: sudo apt-get install libxslt-dev libxml2-dev
+
     - name: Prepare the environment
       run: |
-        apt-get install -y libxslt-dev libxml2-dev
         gem install bundler
         bundle update --jobs 4 --retry 3
-      env:
-        NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+        #env:
+        #NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
     - name: Build the site
       run: bundle exec rake build
